@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q4 Drill 2 - Heat Index Checker</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">🌡️ Heat Index Checker</h1>
+
+    <!-- Toggle Instructions -->
+    <button class="btn btn-info mb-3" onclick="toggleInstructions()">Show Instructions</button>
+    <p id="instructions" style="display:none;">
+        Enter the temperature (°C) and humidity (%), then click "Check" to see the heat index and safety status.
+    </p>
+
+    <!-- Input Form -->
+    <div class="card p-4 shadow">
+        <label>Temperature (°C):</label>
+        <input type="number" id="temp" class="form-control mb-3">
+
+        <label>Humidity (%):</label>
+        <input type="number" id="humidity" class="form-control mb-3">
+
+        <button class="btn btn-primary" onclick="checkHeatIndex()">Check</button>
+    </div>
+
+    <!-- Output -->
+    <div class="mt-4">
+        <h3 id="result"></h3>
+        <p id="status"></p>
+    </div>
+
+    <p class="mt-4">
+        Source: 
+        <a href="https://www.weather.gov/safety/heat-index" target="_blank">
+            NOAA Heat Index Chart
+        </a>
+    </p>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
